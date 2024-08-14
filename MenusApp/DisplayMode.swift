@@ -8,20 +8,26 @@
 // -----------------------------------------
 // Copyright © 2024 Steven Barnett. All rights reserved.
 //
-    
 
 import SwiftUI
 
-@main
-struct MenusAppApp: App {
+enum DisplayMode: String, Identifiable, CaseIterable, Equatable {
+    case light
+    case dark
+    case auto
     
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        
-        .commands {
-            Menus()
+    var id: String {
+        return self.description
+    }
+    
+    var description: String {
+        switch self {
+        case .light:
+            return "Light"
+        case .dark:
+            return "Dark"
+        case .auto:
+            return "Auto"
         }
     }
 }
