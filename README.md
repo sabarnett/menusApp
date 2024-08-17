@@ -4,4 +4,8 @@ So, I spent a lot of time going round in circles, extracting the bits that I tho
 
 This project is part of a series of development notes I want to write to document some of the stuff I learnt along the way. The article that goes with it can be found on my web site.
 
- [Menus](http://www.sabarnett.co.uk/blogPage.php?id=menus)
+There are two articles. The first deals with menus in general and the second with popup context menus:
+
+[Menus](http://www.sabarnett.co.uk/blogPage.php?id=menus)
+
+[Context Menus](http://www.sabarnett.co.uk/blogPage.php?id=contextMenus)

@@ -8,19 +8,51 @@
 // -----------------------------------------
 // Copyright © 2024 Steven Barnett. All rights reserved.
 //
-    
+
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var names = UserData()
+    @State private var selection: User? = nil
+    @State private var orderBy: OrderBy = .firstName
+    
+    var nameList: [User] { names.userList(orderedBy: orderBy) }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List(nameList, id: \.self, selection: $selection) { name in
+                Text(name.description(orderedBy: orderBy))
+            }
+            .contextMenu {
+                Button(action: { duplicateItem() },
+                       label: { Text("Duplicate Me")})
+                    .disabled(selection == nil)
+                
+                Picker(selection: $orderBy, content: {
+                    ForEach(OrderBy.allCases) { order in
+                        Text(order.description).tag(order)
+                    }
+                }, label: { Text("Order By") })
+                
+                Divider()
+                Button(action: { deleteItem() },
+                       label: { Text("Delete Me")})
+                    .disabled(selection == nil)
+            }
         }
         .padding()
+    }
+
+    func duplicateItem() {
+        guard let name = selection else { return }
+        print("Duplicate \(name.description(orderedBy: orderBy))")
+    }
+
+    func deleteItem() {
+        guard let name = selection else { return }
+        print("Delete \(name.description(orderedBy: orderBy))")
     }
 }
 
