@@ -13,6 +13,8 @@
 		E84971422C6B85BE006B5B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84971412C6B85BE006B5B23 /* Assets.xcassets */; };
 		E84971452C6B85BE006B5B23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84971442C6B85BE006B5B23 /* Preview Assets.xcassets */; };
 		E849714D2C6B85FF006B5B23 /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849714C2C6B85FF006B5B23 /* Menus.swift */; };
+		E84E9BD32C74CF01004D9FC8 /* VMMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9BD22C74CF01004D9FC8 /* VMMenus.swift */; };
+		E84E9BD52C74D202004D9FC8 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9BD42C74D202004D9FC8 /* ContentViewViewModel.swift */; };
 		E89B766F2C70A8F20095B6DC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B766E2C70A8F20095B6DC /* UserData.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		E84971442C6B85BE006B5B23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E84971462C6B85BE006B5B23 /* MenusApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MenusApp.entitlements; sourceTree = "<group>"; };
 		E849714C2C6B85FF006B5B23 /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
+		E84E9BD22C74CF01004D9FC8 /* VMMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMMenus.swift; sourceTree = "<group>"; };
+		E84E9BD42C74D202004D9FC8 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
 		E89B766E2C70A8F20095B6DC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +64,10 @@
 			children = (
 				E849713D2C6B85BE006B5B23 /* MenusAppApp.swift */,
 				E849714C2C6B85FF006B5B23 /* Menus.swift */,
+				E84E9BD22C74CF01004D9FC8 /* VMMenus.swift */,
 				E838D5802C6BFBD9008DEAFC /* DisplayMode.swift */,
 				E849713F2C6B85BE006B5B23 /* ContentView.swift */,
+				E84E9BD42C74D202004D9FC8 /* ContentViewViewModel.swift */,
 				E89B766E2C70A8F20095B6DC /* UserData.swift */,
 				E84971412C6B85BE006B5B23 /* Assets.xcassets */,
 				E84971462C6B85BE006B5B23 /* MenusApp.entitlements */,
@@ -150,9 +156,11 @@
 			files = (
 				E84971402C6B85BE006B5B23 /* ContentView.swift in Sources */,
 				E849713E2C6B85BE006B5B23 /* MenusAppApp.swift in Sources */,
+				E84E9BD52C74D202004D9FC8 /* ContentViewViewModel.swift in Sources */,
 				E849714D2C6B85FF006B5B23 /* Menus.swift in Sources */,
 				E89B766F2C70A8F20095B6DC /* UserData.swift in Sources */,
 				E838D5812C6BFBD9008DEAFC /* DisplayMode.swift in Sources */,
+				E84E9BD32C74CF01004D9FC8 /* VMMenus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

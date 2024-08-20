@@ -22,6 +22,7 @@ struct MenusAppApp: App {
         
         .commands {
             Menus()
+            VMMenus()
         }
     }
 }

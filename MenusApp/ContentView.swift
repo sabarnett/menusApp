@@ -14,36 +14,38 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var vm = ContentViewViewModel()
     @State var names = UserData()
     @State private var selection: User? = nil
     @State private var orderBy: OrderBy = .firstName
     
     var nameList: [User] { names.userList(orderedBy: orderBy) }
     
-    var body: some View {
-        VStack {
-            List(nameList, id: \.self, selection: $selection) { name in
-                Text(name.description(orderedBy: orderBy))
-            }
-            .contextMenu {
-                Button(action: { duplicateItem() },
-                       label: { Text("Duplicate Me")})
-                    .disabled(selection == nil)
-                
-                Picker(selection: $orderBy, content: {
-                    ForEach(OrderBy.allCases) { order in
-                        Text(order.description).tag(order)
-                    }
-                }, label: { Text("Order By") })
-                
-                Divider()
-                Button(action: { deleteItem() },
-                       label: { Text("Delete Me")})
-                    .disabled(selection == nil)
-            }
+var body: some View {
+    VStack {
+        List(nameList, id: \.self, selection: $selection) { name in
+            Text(name.description(orderedBy: orderBy))
         }
-        .padding()
+        .contextMenu {
+            Button(action: { duplicateItem() },
+                   label: { Text("Duplicate Me")})
+                .disabled(selection == nil)
+            
+            Picker(selection: $orderBy, content: {
+                ForEach(OrderBy.allCases) { order in
+                    Text(order.description).tag(order)
+                }
+            }, label: { Text("Order By") })
+            
+            Divider()
+            Button(action: { deleteItem() },
+                   label: { Text("Delete Me")})
+                .disabled(selection == nil)
+        }
     }
+    .padding()
+    .focusedSceneObject(vm)
+}
 
     func duplicateItem() {
         guard let name = selection else { return }
