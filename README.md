@@ -16,7 +16,7 @@ There are three notes. The first deals with menus in general, the second with co
 
 The Menus note walks you through modifying the existing menus provided by the template MacOS app and shows how to add a custom menu to it.
 
-![Display menu](displaymenu.png)
+![Display menu](displayMenu.png)
 
 The note goes on to show how to create toggle switches and to create sub-menus using a Pcker.
 
